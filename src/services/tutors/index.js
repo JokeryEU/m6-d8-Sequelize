@@ -56,7 +56,7 @@ router
   .delete(async (req, res, next) => {
     try {
       const data = await Tutor.destroy({ where: { id: req.params.id } });
-      res.status(200).send({ message: "destroyed" });
+      res.status(200).send("destroyed");
     } catch (e) {
       console.log(e);
     }
